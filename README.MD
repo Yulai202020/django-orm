@@ -10,6 +10,8 @@ mysite/.env
 mysite/settings.py
 ```python
 import os
+from dotenv import load_dotenv
+load_dotenv()
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -51,4 +53,4 @@ class Student(models.Model):
 
 python3 manage.py makemigrations
 
-python3 manage.py m migrate
+python3 manage.py migrate
