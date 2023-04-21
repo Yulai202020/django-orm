@@ -5,7 +5,7 @@ django-admin startproject mysite
 
 mysite/.env
 
-DATABASE_URL = 'postgres://user:password@localhost:port/databse'
+    DATABASE_URL = 'postgres://user:password@localhost:port/databse'
 
 mysite/settings.py
 ```python
@@ -52,3 +52,7 @@ class Student(models.Model):
 python3 manage.py makemigrations
 
 python3 manage.py m migrate
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Yulai202020/django-orm.git
+git push -u origin main
