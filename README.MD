@@ -1,23 +1,28 @@
 ### install django
 pip3 install django
+
 django-admin startproject mysite
 
 mysite/.env
-    DATABASE_URL = 'postgres://user:password@localhost:port/databse'
+
+DATABASE_URL = 'postgres://user:password@localhost:port/databse'
 
 mysite/settings.py
 ```python
-    import os
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": "postgres",
-            "DATABASE_URL": os.environ.get("DATABASE_URL")
-        }
+import os
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "DATABASE_URL": os.environ.get("DATABASE_URL")
     }
+}
 ```
+### create app
 
 python3 manage.py startapp student
+
+### create model
 
 student/models.py
 ```py
@@ -42,5 +47,8 @@ class Student(models.Model):
         return self.firstname
 ```
 
+### migrate to the database
+
 python3 manage.py makemigrations
+
 python3 manage.py m migrate
