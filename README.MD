@@ -40,7 +40,6 @@ class Teacher(models.Model):
         return self.firstname
 
 class Student(models.Model):
-      
     firstname = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
     age = models.IntegerField()
